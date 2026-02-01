@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Nunito", "sans-serif"],
+        body: ["Quicksand", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        science: {
+          DEFAULT: "hsl(var(--science))",
+          light: "hsl(var(--science-light))",
+          foreground: "hsl(var(--science-foreground))",
+        },
+        literature: {
+          DEFAULT: "hsl(var(--literature))",
+          light: "hsl(var(--literature-light))",
+          foreground: "hsl(var(--literature-foreground))",
+        },
+        history: {
+          DEFAULT: "hsl(var(--history))",
+          light: "hsl(var(--history-light))",
+          foreground: "hsl(var(--history-foreground))",
+        },
+        technology: {
+          DEFAULT: "hsl(var(--technology))",
+          light: "hsl(var(--technology-light))",
+          foreground: "hsl(var(--technology-foreground))",
+        },
+        selfdev: {
+          DEFAULT: "hsl(var(--self-dev))",
+          light: "hsl(var(--self-dev-light))",
+          foreground: "hsl(var(--self-dev-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +94,31 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        "scale-up": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.05)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        wiggle: "wiggle 0.5s ease-in-out",
+        "scale-up": "scale-up 0.3s ease-out forwards",
+      },
+      boxShadow: {
+        "card-hover": "0 20px 40px -10px rgba(0, 0, 0, 0.15)",
+        "category": "0 8px 30px -5px rgba(0, 0, 0, 0.1)",
       },
     },
   },
